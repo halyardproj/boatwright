@@ -4,4 +4,3 @@ WORKDIR /tmp
 COPY . .
 RUN cd install \
 bash install.sh kubectl
-RUN make kube_version

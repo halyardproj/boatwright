@@ -2,7 +2,7 @@
 
 VERSION ?= latest
 SERVICE ?= boatwright
-WORKDIR ?= /go/src/${SERVICE}
+WORKDIR ?= /go/src/halyard/
 
 
 list :
@@ -13,3 +13,5 @@ build_image :
 	docker build -t ${SERVICE} .
 kube_command : 
 	kubectl version
+help : build_image
+	docker run --rm -v ${PWD}:${WORKDIR}${SERVICE} help
