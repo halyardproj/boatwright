@@ -1,2 +1,2 @@
-# boatwright
+# Boatwright
 Maker of boats
